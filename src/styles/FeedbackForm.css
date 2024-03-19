@@ -1,0 +1,37 @@
+.feedbackContainer {
+  width: 55%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#feedbackForm {
+  width: 90% !important;
+  font-size: 20px;
+  padding: 2.5%;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 1.25%;
+}
+
+#feedbackButton {
+  background-color: transparent;
+  border: 1px solid #373737;
+}
+
+#feedbackButton:active {
+  border: 1px solid black;
+  outline: none;
+}
+
+#feedbackButton:focus {
+  border: 1px solid #373737;
+  outline: none;
+}
+
+#feedbackButton:hover {
+  animation: blueHover ease-in-out 10ms 1 forwards;
+}
+
+textarea:focus {
+  outline: none;
+}

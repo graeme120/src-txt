@@ -1,0 +1,252 @@
+@keyframes linkedCitation {
+  0% {
+    background-color: rgba(0, 0, 255, 1);
+  }
+  2.5% {
+    background-color: rgba(0, 0, 255, 1);
+  }
+  100% {
+    background-color: rgba(0, 0, 255, 0);
+  }
+}
+
+.linkedCitationAnimation {
+  animation: linkedCitation 1000ms;
+}
+
+@keyframes draftMoveRight {
+  0% {
+    transform: translateX(0px);
+  }
+  12.5% {
+    transform: translateX(100.61px);
+  }
+  25% {
+    transform: translateX(163.5px);
+  }
+  37.5% {
+    transform: translateX(198.77px);
+  }
+  50% {
+    transform: translateX(220.86px);
+  }
+  62.5% {
+    transform: translateX(235.28px);
+  }
+  75% {
+    transform: translateX(243.87px);
+  }
+  87.5% {
+    transform: translateX(248.47px);
+  }
+  100% {
+    transform: translateX(250px);
+  }
+}
+
+@keyframes draftMoveLeft {
+  0% {
+    transform: translateX(250px);
+  }
+  12.5% {
+    transform: translateX(219.94px);
+  }
+  25% {
+    transform: translateX(120.55px);
+  }
+  37.5% {
+    transform: translateX(64.72px);
+  }
+  50% {
+    transform: translateX(34.66px);
+  }
+  62.5% {
+    transform: translateX(16.99px);
+  }
+  75% {
+    transform: translateX(6.75px);
+  }
+  87.5% {
+    transform: translateX(1.53px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.draftMoveRight {
+  animation: draftMoveRight 280ms 100ms;
+  animation-fill-mode: forwards;
+}
+
+.draftMoveLeft {
+  animation: draftMoveLeft 280ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes citationsMoveRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  12.5% {
+    transform: translateX(-57.74%);
+  }
+  25% {
+    transform: translateX(-31.33%);
+  }
+  37.5% {
+    transform: translateX(-16.52%);
+  }
+  50% {
+    transform: translateX(-7.24%);
+  }
+  62.5% {
+    transform: translateX(-1.18%);
+  }
+  75% {
+    transform: translateX(2.42%);
+  }
+  87.5% {
+    transform: translateX(4.36%);
+  }
+  100% {
+    transform: translateX(5%);
+  }
+}
+
+@keyframes citationsMoveLeft {
+  0% {
+    transform: translateX(5%);
+  }
+  12.5% {
+    transform: translateX(-7.63%);
+  }
+  25% {
+    transform: translateX(-49.37%);
+  }
+  37.5% {
+    transform: translateX(-72.82%);
+  }
+  50% {
+    transform: translateX(-85.44%);
+  }
+  62.5% {
+    transform: translateX(-92.86%);
+  }
+  75% {
+    transform: translateX(-97.17%);
+  }
+  87.5% {
+    transform: translateX(-99.36%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.citationsMoveRight {
+  /* transform: translateX(0%) !important; */
+  animation: citationsMoveRight 280ms 100ms;
+  animation-fill-mode: forwards;
+}
+
+.citationsMoveLeft {
+  /* transform: translateX(0%) !important; */
+  animation: citationsMoveLeft 280ms;
+  animation-fill-mode: forwards;
+}
+
+.citations {
+  width: 25%;
+  height: 100vh;
+  position: fixed;
+  transform: translateX(-100%);
+  /* transition: transform 300ms; */
+  padding: 2% 2.5% 5% 2.5%;
+  border: 1px solid #b6b6b6;
+  background-color: white;
+  filter: drop-shadow(2px 10px 5px rgb(212, 212, 212));
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.citations::-webkit-scrollbar {
+  display: none;
+}
+
+.citation-block {
+  width: 20%;
+  margin-bottom: 5%;
+  border: 0.5px solid #b6b6b6;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.citation-block:hover {
+  outline: 1px solid blue;
+  cursor: pointer;
+}
+
+.citation-block > div > iframe {
+  /* width: 99% !important; */
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  pointer-events: none;
+}
+
+.citation-block > div > div > iframe {
+  pointer-events: none;
+  height: auto !important;
+}
+
+.linked-citation {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+.citation-that-has-been-linked {
+  outline: 1px solid #c1c1ff;
+}
+
+.citations-search-bar {
+  margin-bottom: 5%;
+  width: 96%;
+  padding: 2%;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  border: 1px solid #949393;
+  border-radius: 4px;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+.citationThumbnail {
+  box-sizing: border-box;
+  border-left: 0.5px solid #7a7a7a;
+  border-bottom: 0.5px solid #7a7a7a;
+  border-right: 0.5px solid #7a7a7a;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.websiteCitationHeader {
+  line-height: 1.5;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px solid #7a7a7a;
+  padding: 3.5% 6% 2.25% 6%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: white;
+  pointer-events: none;
+}
+
+.citationWidget iframe {
+  width: 100%;
+  max-width: none;
+}

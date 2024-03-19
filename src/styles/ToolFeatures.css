@@ -1,0 +1,57 @@
+.split-screen-container {
+  display: flex;
+  position: relative;
+}
+
+.image-section.visible {
+  opacity: 1;
+}
+
+.text-container {
+  width: 40%;
+  padding: 0% 5% 0% 2.5%;
+  overflow: auto;
+}
+
+.text-section:nth-child(1) {
+  margin-top: 40vh;
+  margin-bottom: 75vh;
+}
+
+.text-section:nth-child(2) {
+  margin-bottom: 75vh;
+}
+
+.text-section:nth-child(3) {
+  margin-bottom: 35vh; /* Ensure they do not appear on the screen at the same time */
+}
+
+.media-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+  overflow: hidden;
+}
+
+.media-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Start invisible */
+  transition: opacity 500ms ease-in-out; /* Adjust time as needed */
+  padding-left: 5%;
+}
+
+.media-section.visible {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.tool-feature-header {
+  margin-block-end: 0.75em;
+}
