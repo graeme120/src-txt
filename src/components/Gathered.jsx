@@ -35,12 +35,30 @@ function Gathered({ allBlocks }) {
   }, []); // This effect runs only once, similar to componentDidMount
 
   useEffect(() => {
+    function biasedRandom() {
+      // Generate a random number between 0 and the total weight (185)
+      let num = Math.random() * 185;
+
+      // Check which weighted range this number falls into
+      if (num < 75) {
+        // Corresponds to 0-15, weighted by 5
+        return num / 5; // Scale back to the correct range
+      } else if (num < 135) {
+        // Corresponds to 15-75, normal weight
+        return 15 + (num - 75); // Adjust based on the offset in the weighted distribution
+      } else {
+        // Corresponds to 75-85, weighted by 5
+        return 75 + (num - 135) / 5; // Adjust and scale back to the correct range
+      }
+    }
+    // Use biasedRandom() to generate skewed top and left values
+
     if (isInitialized) {
       // Ensure blocks are positioned only after initialization
       const blocksWithPosition = allBlocks.map((block) => ({
         ...block,
-        top: `${Math.random() * 80 - 20}%`,
-        left: `${Math.random() * 90 - 10}%`,
+        top: `${biasedRandom()}%`,
+        left: `${biasedRandom()}%`,
         width: "200px",
         visible: false,
       }));
