@@ -69,9 +69,9 @@ function ToolFeatures() {
           <h3 className="tool-feature-header">
             Connect Sources to a Primary Text
           </h3>
-          In <i>Draft,</i> compositions can be written and edited, and resources
-          from the Gather environment can be dynamically linked to pieces of
-          text.
+          In <i>Draft mode,</i> compositions can be written and edited, and
+          resources from the Gather environment can be dynamically linked to
+          pieces of text.
         </div>
         <div className="text-section">
           <h3 className="tool-feature-header">Enhance Writing as a Src-txt</h3>
@@ -88,4 +88,3 @@ function ToolFeatures() {
 }
 
 export default ToolFeatures;
-n;
