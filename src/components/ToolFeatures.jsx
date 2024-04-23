@@ -30,7 +30,7 @@ function ToolFeatures() {
           muted
         >
           <source
-            src="https://image-gosting.s3.amazonaws.com/thesis2024/mockup-presenting.mp4"
+            src="https://image-gosting.s3.amazonaws.com/thesis2024/ThesisVideoMockup1.mp4"
             type="video/mp4"
           />
         </video>
@@ -41,7 +41,7 @@ function ToolFeatures() {
           muted
         >
           <source
-            src="https://image-gosting.s3.amazonaws.com/thesis2024/thesis-mockup-linking.mp4"
+            src="https://image-gosting.s3.amazonaws.com/thesis2024/ThesisVideoMockup2.mp4"
             type="video/mp4"
           />
         </video>
@@ -52,7 +52,7 @@ function ToolFeatures() {
           muted
         >
           <source
-            src="https://image-gosting.s3.amazonaws.com/thesis2024/mockup-presenting.mp4"
+            src="https://image-gosting.s3.amazonaws.com/thesis2024/ThesisVideoMockup6.mp4"
             type="video/mp4"
           />
         </video>
