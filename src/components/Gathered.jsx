@@ -227,13 +227,13 @@ const renderMediaBlock = (block, header) => (
 
 const renderLinkBlock = (block, header) => (
   <div className="gatheredBlock">
-    {block.source.provider.name === "Twitter" && (
+    {/* {block.source.provider.name === "Twitter" && (
       <TwitterEmbed
         style={{ PointerEvent: "none" }}
         url={block.source.url}
         width={250}
       />
-    )}
+    )} */}
     {block.source.provider.name === "Instagram" && (
       <InstagramEmbed url={block.source.url} width={300} />
     )}

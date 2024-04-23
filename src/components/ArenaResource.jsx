@@ -109,29 +109,32 @@ function ArenaResource({ allBlocks, column }) {
           )}
           {block.class === "Link" && (
             <>
-              {block.source.provider.name === "Twitter" ? (
-                <TwitterEmbed url={block.source.url} width={250} />
-              ) : block.source.provider.name === "Instagram" ? (
-                <InstagramEmbed url={block.source.url} width={250} />
-              ) : (
-                <div className="websiteWidget">
-                  <div className="websiteWidgetHeader">
-                    <div className="websiteLinkIcon">
-                      <img
-                        src="https://image-gosting.s3.amazonaws.com/misc/hyperlink.svg"
-                        alt="Link Icon"
-                      ></img>
+              {
+                // block.source.provider.name === "Twitter" ? (
+                //   <TwitterEmbed url={block.source.url} width={250} />
+                // ) :
+                block.source.provider.name === "Instagram" ? (
+                  <InstagramEmbed url={block.source.url} width={250} />
+                ) : (
+                  <div className="websiteWidget">
+                    <div className="websiteWidgetHeader">
+                      <div className="websiteLinkIcon">
+                        <img
+                          src="https://image-gosting.s3.amazonaws.com/misc/hyperlink.svg"
+                          alt="Link Icon"
+                        ></img>
+                      </div>
+                      <div>{block.generated_title}</div>
                     </div>
-                    <div>{block.generated_title}</div>
+                    <img
+                      className="websiteThumbnail"
+                      src={block.image.original.url}
+                      alt={block.title}
+                      title={block.title}
+                    ></img>
                   </div>
-                  <img
-                    className="websiteThumbnail"
-                    src={block.image.original.url}
-                    alt={block.title}
-                    title={block.title}
-                  ></img>
-                </div>
-              )}
+                )
+              }
             </>
           )}
           {block.class === "Attachment" && (

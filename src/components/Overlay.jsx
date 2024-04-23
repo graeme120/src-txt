@@ -279,45 +279,48 @@ function Overlay() {
                 )}
                 {block.class === "Link" && (
                   <>
-                    {block.source.provider.name === "Twitter" ? (
-                      <TwitterEmbed
-                        url={block.source.url}
-                        className="block"
-                        width="100%"
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                          borderRadius: "20px",
-                        }}
-                      />
-                    ) : block.source.provider.name === "Instagram" ? (
-                      <InstagramEmbed
-                        url={block.source.url}
-                        className="block"
-                        width="100%"
-                      />
-                    ) : (
-                      <div className="block overlay-websiteWidget">
-                        <a
-                          href={block.source.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div className="overlay-websiteWidgetHeader">
-                            <div className="overlay-websiteLinkIcon">
-                              <img src="https://image-gosting.s3.amazonaws.com/misc/hyperlink.svg"></img>
+                    {
+                      // block.source.provider.name === "Twitter" ? (
+                      //   <TwitterEmbed
+                      //     url={block.source.url}
+                      //     className="block"
+                      //     width="100%"
+                      //     style={{
+                      //       display: "flex",
+                      //       justifyContent: "center",
+                      //       borderRadius: "20px",
+                      //     }}
+                      //   />
+                      // ) :
+                      block.source.provider.name === "Instagram" ? (
+                        <InstagramEmbed
+                          url={block.source.url}
+                          className="block"
+                          width="100%"
+                        />
+                      ) : (
+                        <div className="block overlay-websiteWidget">
+                          <a
+                            href={block.source.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <div className="overlay-websiteWidgetHeader">
+                              <div className="overlay-websiteLinkIcon">
+                                <img src="https://image-gosting.s3.amazonaws.com/misc/hyperlink.svg"></img>
+                              </div>
+                              <div>{block.generated_title}</div>
                             </div>
-                            <div>{block.generated_title}</div>
-                          </div>
-                          <iframe
-                            className="overlay-websiteThumbnail"
-                            src={block.source.url}
-                            alt=""
-                            title={block.title}
-                          ></iframe>
-                        </a>
-                      </div>
-                    )}
+                            <iframe
+                              className="overlay-websiteThumbnail"
+                              src={block.source.url}
+                              alt=""
+                              title={block.title}
+                            ></iframe>
+                          </a>
+                        </div>
+                      )
+                    }
                   </>
                 )}
               </div>
