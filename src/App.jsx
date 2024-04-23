@@ -14,7 +14,7 @@ import Article from "./components/Article";
 import Citations from "./components/Citations";
 import Gathered from "./components/Gathered";
 import Overlay from "./components/Overlay";
-import ZoomPanComponent from "./components/ZoomPan";
+
 import ToolFeatures from "./components/ToolFeatures";
 import FeedbackForm from "./components/FeedbackForm";
 
