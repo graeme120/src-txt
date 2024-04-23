@@ -1,10 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Vimeo from "@u-wave/react-vimeo";
-import {
-  TikTokEmbed,
-  TwitterEmbed,
-  InstagramEmbed,
-} from "react-social-media-embed";
+import { TikTokEmbed, InstagramEmbed } from "react-social-media-embed";
 
 function Gathered({ allBlocks }) {
   const [lastVisibleIndex, setLastVisibleIndex] = useState(-1);

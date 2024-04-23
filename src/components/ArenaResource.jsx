@@ -5,7 +5,6 @@ import {
   LinkedInEmbed,
   PinterestEmbed,
   TikTokEmbed,
-  TwitterEmbed,
   YouTubeEmbed,
 } from "react-social-media-embed";
 import Vimeo from "@u-wave/react-vimeo";

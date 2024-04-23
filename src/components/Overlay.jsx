@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { TwitterTweetEmbed } from "react-twitter-embed";
 import {
   FacebookEmbed,
   InstagramEmbed,
@@ -7,7 +6,6 @@ import {
   PinterestEmbed,
   TikTokEmbed,
   EmbedToggler,
-  TwitterEmbed,
   YouTubeEmbed,
   PlaceholderEmbed,
 } from "react-social-media-embed";
